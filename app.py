@@ -1,13 +1,6 @@
 #Name:Aditee Dnyaneshwar Dakhane
 #StudentID: 1001745502
-#Sites Referred:
-# https://stackoverflow.com/questions/25389095/python-get-path-of-root-project-structure
-# https://pythonprogramming.net/reading-csv-files-python-3/
-# https://www.reddit.com/r/learnpython/comments/5s3x1n/how_to_target_a_specific_path_in_my_applications/
-# https://github.com/Harshinichandran/Assignment1_Cloud/
-# https://stackoverflow.com/questions/16351826/link-to-flask-static-files-with-url-for
 
-#Link on Cloud: http://aditeedakhanequiz1.us-south.cf.appdomain.cloud/
 
 import base64
 import os
