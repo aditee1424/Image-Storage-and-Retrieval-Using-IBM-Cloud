@@ -1,0 +1,39 @@
+<!--Name:Aditee Dakhane-->
+<!--StudentID: 1001745502-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Change Keyword</title>
+       <h2>1001745502</h2>
+    <h2>Aditee Dakhane</h2>
+    <br>
+    <form action="{{url_for('changekeyword')}}" method="POST">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="Jason"><br>
+        <label for="keyword">Keyword:</label><br>
+  <input type="text" id="keyword" name="keyword" value="Not so nice anymore"><br>
+  <input type="submit" value="Submit">
+        <br>
+
+</form>
+       <br>
+    <table border = 1>
+         <thead>
+            <td>Name</td>
+            <td>Keywords</td>
+         </thead>
+<!--database rows are fetched-->
+         {% for row in rows %}
+         <tr>
+             <td>{{row["Name"]}}</td>
+            <td>{{row["Keyword"]}}</td>
+         </tr>
+         {% endfor %}
+      </table>
+     <h2> <a href = "/">Home</a> </h2>
+</head>
+<body>
+
+</body>
+</html>

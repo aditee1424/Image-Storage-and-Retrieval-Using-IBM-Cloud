@@ -1,0 +1,35 @@
+<!--Name:Aditee Dakhane-->
+<!--StudentID: 1001745502-->
+
+
+<!doctype html>
+<html>
+<head>
+     <h2>1001745502</h2>
+    <h2>Aditee Dakhane</h2>
+    <br>
+</head>
+
+   <body>
+   <h2>Retrieved Table Data</h2>
+ <table border = 1>
+
+<!--database rows are fetched-->
+         {% for row in rows %}
+         <tr>
+            <td>{{row["Name"]}}</td>
+            <td>{{row["Salary"]}}</td>
+            <td> {{row["Room"]}}</td>
+            <td>{{row['Telnum']}}</td>
+            <td>{{row['Keyword']}}</td>
+             <td><img src="./static/{{row['Pic']}}"></img></td>
+         </tr>
+         {% endfor %}
+      </table>
+
+
+
+      <br>
+      <h2> <a href = "/">Home</a> </h2>
+   </body>
+</html>

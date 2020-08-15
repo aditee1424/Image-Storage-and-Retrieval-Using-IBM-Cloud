@@ -1,0 +1,37 @@
+<!--Name:Aditee Dakhane-->
+<!--StudentID: 1001745502-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Change Salary</title>
+     <h2>1001745502</h2>
+    <h2>Aditee Dakhane</h2>
+    <br>
+    <form action="{{url_for('changesalary')}}" method="POST">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="Someone"><br>
+        <label for="salary">Salary:</label><br>
+  <input type="text" id="salary" name="salary"><br>
+  <input type="submit" value="Submit">
+</form>
+   <br>
+    <table border = 1>
+         <thead>
+            <td>Name</td>
+            <td>Salary</td>
+         </thead>
+<!--database rows are fetched-->
+         {% for row in rows %}
+         <tr>
+             <td>{{row["Name"]}}</td>
+            <td>{{row["Salary"]}}</td>
+         </tr>
+         {% endfor %}
+      </table>
+     <h2> <a href = "/">Home</a> </h2>
+</head>
+<body>
+
+</body>
+</html>

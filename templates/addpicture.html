@@ -1,0 +1,40 @@
+<!--Name:Aditee Dakhane-->
+<!--StudentID: 1001745502-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add picture for dave</title>
+    <h2>1001745502</h2>
+    <h2>Aditee Dakhane</h2>
+    <br>
+    <form action="{{url_for('addpicture')}}" method="POST" enctype="multipart/form-data">
+         <label for="fname">First name:</label><br>
+         <input type="text" id="fname" name="fname" value="Dave"><br>
+         <label for="pic">Add Picture(Ex: dave.jpg)</label><br>
+         <input type="text" id="pic" name="pic" value="dave.jpg"><br>
+
+    	  <input type="submit" value="Upload!" id="upload-button">
+		</form>
+    <br>
+    <br>
+    <table border = 1>
+
+<!--database rows are fetched-->
+         {% for row in rows %}
+         <tr>
+            <td>{{row["Name"]}}</td>
+            <td>{{row["Salary"]}}</td>
+            <td> {{row["Room"]}}</td>
+            <td>{{row['Telnum']}}</td>
+            <td>{{row['Keyword']}}</td>
+             <td><img src="./static/{{row['Pic']}}"></img></td>
+         </tr>
+         {% endfor %}
+      </table>
+</head>
+ <h2> <a href = "/">Home</a> </h2>
+<body>
+
+</body>
+</html>

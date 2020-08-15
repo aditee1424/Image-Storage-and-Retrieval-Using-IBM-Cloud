@@ -1,0 +1,35 @@
+<!--Name:Aditee Dakhane-->
+<!--StudentID: 1001745502-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Student</title>
+        <h2>1001745502</h2>
+    <h2>Aditee Dakhane</h2>
+    <br>
+    <form action="{{url_for('search')}}" method="POST">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="Chris"><br>
+  <input type="submit" value="Submit">
+</form>
+    <br>
+    <table border = 1>
+         <thead>
+            <td>Name</td>
+            <td>Pic</td>
+         </thead>
+<!--database rows are fetched-->
+         {% for row in rows %}
+         <tr>
+             <td>{{row["Name"]}}</td>
+             <td><img src='../static/{{row["Pic"]}}' alt="no picture available"></td>
+         </tr>
+         {% endfor %}
+      </table>
+     <h2> <a href = "/">Home</a> </h2>
+</head>
+<body>
+
+</body>
+</html>
